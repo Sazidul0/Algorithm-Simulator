@@ -56,6 +56,15 @@ const Header = () => {
           <ul className="menu menu-horizontal">
             <li tabIndex={0}></li>
             <li className="text-xl">
+              <a href="/sorting">Sorting</a>
+            </li>
+            <li className="text-xl">
+              <a href="/searching">Searching</a>
+            </li>
+            <li className="text-xl">
+              <a href="/pathfinder">Pathfinder</a>
+            </li>
+            <li className="text-xl">
               <a href="/progress-bar">ProgressBar</a>
             </li>
             <li className="text-xl">
