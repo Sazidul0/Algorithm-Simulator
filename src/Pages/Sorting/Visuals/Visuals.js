@@ -39,6 +39,14 @@ function Visuals() {
     });
   };
 
+  const handleReset = () => {
+    if (myState.loading === true) {
+      dispatch({
+        type: "RESET",
+      });
+    }
+  };
+
   useEffect(() => {
     if (!myState.play) {
       document.getElementById("play-btn").disabled = false;
@@ -55,59 +63,64 @@ function Visuals() {
   else if (myState.algorithm === "merge") speed *= 5;
   else if (myState.algorithm === "quick") speed *= 6;
   return (
-    <div className="visuals">
-      <div className="visualizer">
-        {myState.algorithm === "quick" && (
-          <div className="legend">
-            <div className="legend__lable"></div> Pivot elements
-          </div>
-        )}
-        {
-          <div
-            className="visual__items"
-            style={{ width: `${myState.values.length * 11}px` }}
-          >
-            {myState.values.map((item) => {
-              return (
-                <div
-                  className="visual__item"
-                  key={item[1]}
-                  id={item[1]}
-                  style={{
-                    transition: `${speed / 1000}s linear all`,
-                    transform: `translateX(${item[1] * 11}px)`,
-                  }}
-                >
-                  <h4>{item[0]}</h4>
+    <form id="myForm">
+      <div className="visuals">
+        <div className="visualizer">
+          {myState.algorithm === "quick" && (
+            <div className="legend">
+              <div className="legend__lable"></div> Pivot elements
+            </div>
+          )}
+          {
+            <div
+              className="visual__items"
+              style={{ width: `${myState.values.length * 11}px` }}
+            >
+              {myState.values.map((item) => {
+                return (
                   <div
-                    className="visual"
+                    className="visual__item"
+                    key={item[1]}
+                    id={item[1]}
                     style={{
-                      height: `${item[0] * 3}px`,
-                      backgroundColor: color,
-                      width: range < 35 ? "8px" : "6px",
+                      transition: `${speed / 1000}s linear all`,
+                      transform: `translateX(${item[1] * 11}px)`,
                     }}
-                  ></div>
-                </div>
-              );
-            })}
-          </div>
-        }
-      </div>
-      <div className="visual__btns">
-        <button id="change-btn" onClick={changeValues}>
-          change values
-        </button>
-        <button id="play-btn" onClick={() => handlePlayPause(true)}>
-          play
-        </button>
-      </div>
+                  >
+                    <h4>{item[0]}</h4>
+                    <div
+                      className="visual"
+                      style={{
+                        height: `${item[0] * 3}px`,
+                        backgroundColor: color,
+                        width: range < 35 ? "8px" : "6px",
+                      }}
+                    ></div>
+                  </div>
+                );
+              })}
+            </div>
+          }
+        </div>
+        <div className="visual__btns">
+          <button id="change-btn" onClick={changeValues}>
+            change values
+          </button>
+          <button id="play-btn" onClick={() => handlePlayPause(true)}>
+            play
+          </button>
+          <button id="reset-btn" onClick={handleReset}>
+            reset
+          </button>
+        </div>
 
-      <BubbleSort />
-      <InsertionSort />
-      <MergeSort />
-      <QuickSort />
-      <SelectionSort />
-    </div>
+        <BubbleSort />
+        <InsertionSort />
+        <MergeSort />
+        <QuickSort />
+        <SelectionSort />
+      </div>
+    </form>
   );
 }
 

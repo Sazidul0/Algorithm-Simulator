@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { TabPanel } from "react-tabs";
 
 const SelectionSort = () => {
   const myState = useSelector((state) => state.updateProps);
@@ -61,7 +62,7 @@ const SelectionSort = () => {
     }
   }, [myState.play]);
 
-  return <></>;
+  return <TabPanel />;
 };
 
 export default SelectionSort;

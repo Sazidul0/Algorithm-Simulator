@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { TabPanel } from "react-tabs";
 
 const QuickSort = () => {
   const myState = useSelector((state) => state.updateProps);
@@ -89,7 +90,7 @@ const QuickSort = () => {
     }
   }, [myState.play]);
 
-  return <></>;
+  return <TabPanel />;
 };
 
 export default QuickSort;
