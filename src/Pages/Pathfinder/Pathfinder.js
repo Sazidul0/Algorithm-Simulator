@@ -1,6 +1,7 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import PathfindingVisualizer from './src/PathfindingVisualizer/PathfindingVisualizer';
 
 
 const Pathfinder = () => {
@@ -13,7 +14,9 @@ const Pathfinder = () => {
         {/* <Tab>Bellman-Ford algorithm</Tab> */}
       </TabList>
 
-      <TabPanel>
+      <TabPanel className={'dfs'}>
+      <h1 className="text-5xl text-center font-bold pt-8">Depth First Search</h1>
+      <PathfindingVisualizer></PathfindingVisualizer>
         <div>
           <h2 className="text-4xl font-bold py-5">DFS Algorithm</h2>
           <p>Depth-First Search (DFS) is a graph traversal algorithm that explores a graph or tree by starting at a given source node and visiting its adjacent nodes, proceeding deeper into the structure before backtracking. It's a fundamental algorithm used in various applications, such as finding connected components, topological sorting, and solving puzzles like mazes.</p>
@@ -34,7 +37,9 @@ const Pathfinder = () => {
         </div>
 
       </TabPanel>
-      <TabPanel>
+      <TabPanel className={'bfs'}>
+        <h1 className="text-5xl text-center font-bold pt-8">Breadth First Search</h1>
+      <PathfindingVisualizer></PathfindingVisualizer>
         <div>
           <h2 className="text-4xl font-bold py-5">BFS Algorithm</h2>
           <p>Breadth-First Search (BFS) is a graph traversal algorithm that explores a graph by visiting all the nodes at the current depth before moving on to nodes at the next depth. It systematically explores a graph, starting from a given source node, and visits nodes layer by layer. BFS is widely used in various applications, including shortest path finding, network analysis, and more. </p>
@@ -54,7 +59,9 @@ const Pathfinder = () => {
           </ul>
         </div>
       </TabPanel>
-      <TabPanel>
+      <TabPanel className={'dijkstras'}>
+      <h1 className="text-5xl text-center font-bold pt-8">Dijkstra's</h1>
+      <PathfindingVisualizer></PathfindingVisualizer>
         <div>
           <h2 className="text-4xl font-bold py-5">Dijkstra Algorithm</h2>
           <p>Dijkstra's algorithm is a widely used algorithm for finding the shortest path from a single source vertex to all other vertices in a weighted, directed or undirected graph. It was developed by Dutch computer scientist Edsger W. Dijkstra in 1956 and is commonly used in network routing protocols, transportation networks, and various applications where finding the shortest path is essential.</p>
@@ -74,6 +81,7 @@ const Pathfinder = () => {
           </ul>
         </div>
       </TabPanel>
+      
       {/* <TabPanel>
         <h2>Bellman-Ford algorithm</h2>
       </TabPanel> */}

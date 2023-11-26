@@ -1,0 +1,44 @@
+.pathfinding-visualizer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(10, 100px);
+    grid-gap: 1px;
+  }
+  
+  .grid-row {
+    display: flex;
+  }
+  
+  .node {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  .node-start {
+    background-color: #4caf50;
+  }
+  
+  .node-end {
+    background-color: #f44336;
+  }
+  
+  .node-wall {
+    background-color: #000;
+  }
+  
+  .node-visited {
+    background-color: #ffd700;
+  }
+  
+  .node-shortest-path {
+    background-color: #2196f3;
+  }
+  
