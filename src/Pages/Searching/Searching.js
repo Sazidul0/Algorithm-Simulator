@@ -80,8 +80,8 @@ const Searching = () => {
 
       <Tabs>
         <TabList>
-          <Tab>Linear Search</Tab>
-          <Tab>Binary Search</Tab>
+          <Tab > <h2 className="text-xl text-center font-bold pt-1">Linear Search</h2></Tab>
+          <Tab> <h2 className="text-xl text-center font-bold pt-1">Binary Search</h2></Tab>
         </TabList>
 
         <TabPanel>

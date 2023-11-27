@@ -28,4 +28,4 @@ Follow these steps to set up the project locally:
     ```bash
     npm start
     ```
-4. *Open your browser and navigate to http://localhost:3000 to view the application.*
+4. **Open your browser and navigate to http://localhost:3000 to view the application.**
