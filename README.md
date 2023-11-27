@@ -36,4 +36,4 @@ Follow these steps to set up the project locally:
 
 Experience the Algorithm Visualizer in action on the live site. Visit the following link:
 
-[Algorithm Visualizer Live Site](https://algoritm-visualizer.netlify.app/)
+[Algorithm Visualizer Live Site](https://algorithm-simulator.vercel.app/)
