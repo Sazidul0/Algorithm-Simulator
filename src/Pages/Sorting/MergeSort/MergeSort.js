@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { TabPanel } from "react-tabs";
-
 const MergeSort = () => {
   const myState = useSelector((state) => state.updateProps);
   const dispatch = useDispatch();
@@ -74,7 +72,7 @@ const MergeSort = () => {
     }
   }, [myState.play]);
 
-  return <TabPanel />;
+  return;
 };
 
 export default MergeSort;

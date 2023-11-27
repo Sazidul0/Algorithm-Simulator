@@ -2,25 +2,24 @@
   margin: 10% auto;
 }
 
-.grid {
-  white-space: pre;
-}
-
 button {
   margin: 2px;
 }
 
-.pathfinder-btn-container{
+.pathfinder-btn-container {
   display: flex;
   justify-content: center;
 }
 
-.dfs .bfs-btn, .dfs .dijkstras-btn{
+.dfs .bfs-btn,
+.dfs .dijkstras-btn {
   display: none;
 }
-.bfs .dfs-btn, .bfs .dijkstras-btn{
+.bfs .dfs-btn,
+.bfs .dijkstras-btn {
   display: none;
 }
-.dijkstras .bfs-btn, .dijkstras .dfs-btn{
+.dijkstras .bfs-btn,
+.dijkstras .dfs-btn {
   display: none;
 }

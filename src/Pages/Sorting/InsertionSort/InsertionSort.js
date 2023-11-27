@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { TabPanel } from "react-tabs";
 
 const InsertionSort = () => {
   const myState = useSelector((state) => state.updateProps);
@@ -86,7 +85,7 @@ const InsertionSort = () => {
     }
   }, [myState.play]);
 
-  return <TabPanel />;
+  return;
 };
 
 export default InsertionSort;

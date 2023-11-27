@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { TabPanel } from "react-tabs";
 const BubbleSort = () => {
   const myState = useSelector((state) => state.updateProps);
   const dispatch = useDispatch();
@@ -71,7 +70,7 @@ const BubbleSort = () => {
     }
   }, [myState.play]);
 
-  return <TabPanel />;
+  return;
 };
 
 export default BubbleSort;

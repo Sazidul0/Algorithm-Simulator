@@ -65,9 +65,6 @@ const Header = () => {
               <a href="/pathfinder">Pathfinder</a>
             </li>
             <li className="text-xl">
-              <a href="/progress-bar">ProgressBar</a>
-            </li>
-            <li className="text-xl">
               <a href="/">Home</a>
             </li>
           </ul>

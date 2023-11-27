@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./Sidebar.css";
-import { Tab, Tabs, TabList } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { Slider } from "@mui/material";
 
@@ -10,6 +9,13 @@ function Sidebar() {
   const dispatch = useDispatch();
 
   const [max, setMax] = useState(30);
+
+  const handleAlgo = (algo) => {
+    dispatch({
+      type: "UPDATE_ALGORITHM",
+      algorithm: algo,
+    });
+  };
 
   const resetColor = () => {
     dispatch({
@@ -76,15 +82,24 @@ function Sidebar() {
   }, []);
 
   return (
-    <Tabs className="px-5 py-3 mb-5">
-      <TabList className="text-lg font-bold">
-        <Tab value="bubble">Bubble Sort</Tab>
-        <Tab value="merge">Merge Sort</Tab>
-        <Tab value="insertion">Insertion Sort</Tab>
-        <Tab value="selection">Selection Sort</Tab>
-        <Tab value="quick">Quick Sort</Tab>
-      </TabList>
+    <div className="px-5 py-3 mb-5">
       <div className="sidebar mt-5">
+        <div className="sidebar__option">
+          <label htmlFor="algo">Algorithm: </label>
+          <select
+            name="algo"
+            id="algo"
+            onChange={(e) => handleAlgo(e.target.value)}
+            disabled={myState.play ? true : false}
+          >
+            <option value="bubble">Bubble Sort </option>
+            <option value="merge">Merge Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="quick">Quick Sort</option>
+          </select>
+        </div>
+
         <div className="sidebar__option">
           <label htmlFor="range">Range: </label>
           <Slider
@@ -109,14 +124,17 @@ function Sidebar() {
             onChange={(e) => handleColor(e.target.value)}
             disabled={myState.play ? true : false}
           >
+            <option
+              value="rgb(0, 149, 199)"
+              style={{ color: "rgb(0, 149, 199)" }}
+            >
+              Blue
+            </option>
             <option value="rgb(85, 212, 0)" style={{ color: "rgb(10,200,20)" }}>
               Green
             </option>
             <option value="rgb(255, 112, 112)" style={{ color: "red" }}>
               Red
-            </option>
-            <option value="#ddd902" style={{ color: "#ddd902" }}>
-              Yellow
             </option>
           </select>
         </div>
@@ -130,13 +148,13 @@ function Sidebar() {
             onChange={(e) => handleSpeed(e.target.value)}
             disabled={myState.play ? true : false}
           >
-            <option defaultValue={200}>Slow</option>
-            <option value={100}>Medium</option>
+            <option value={200}>Slow</option>
+            <option value={50}>Medium</option>
             <option value={5}>Fast</option>
           </select>
         </div>
       </div>
-    </Tabs>
+    </div>
   );
 }
 
