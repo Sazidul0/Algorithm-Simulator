@@ -29,3 +29,11 @@ Follow these steps to set up the project locally:
     npm start
     ```
 4. **Open your browser and navigate to http://localhost:3000 to view the application.**
+
+
+
+### Live Site
+
+Experience the Algorithm Visualizer in action on the live site. Visit the following link:
+
+[Algorithm Visualizer Live Site](https://algoritm-visualizer.netlify.app/)
