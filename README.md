@@ -19,16 +19,19 @@ Follow these steps to set up the project locally:
    ```bash
    git clone https://github.com/your-username/algorithm-visualizer.git
    ```
-2. **Install Dependencies:**
+2. **Change the Directory:**
     ```bash
     cd algorithm-visualizer
+    ```
+3. **Install Dependencies:**
+    ```bash
     npm install
     ```
-3. **Run the Application:**
+4. **Run the Application:**
     ```bash
     npm start
     ```
-4. **Open your browser and navigate to http://localhost:3000 or http://127.0.0.1:3000 to view the application.**
+5. **Open your browser and navigate to http://localhost:3000 or http://127.0.0.1:3000 to view the application.**
 
 
 
